@@ -6,6 +6,8 @@ using System.Windows.Threading;
 using Autofac;
 using Caliburn.Micro;
 using MHXYTools.Framework.Errors;
+using MHXYTools.View;
+using MHXYTools.ViewModel;
 
 namespace MHXYTools.BootStapper.Framework
 {
@@ -37,7 +39,7 @@ namespace MHXYTools.BootStapper.Framework
             var errorsService = IoC.Get<IErrorsService>();
             errorsService.InstallGlobalExceptionHandler();
 
-            DisplayRootViewFor<ShellViewModel>();
+                DisplayRootViewFor<ShellViewModel>();
         }
 
         protected override void OnExit(object sender, EventArgs e)

@@ -46,6 +46,8 @@ namespace MHXYTools.BootStapper.Framework
             ConfigureContainer(builder);
 
             Container = builder.Build();
+
+            ViewLocator.AddSubNamespaceMapping("ViewModel", "View");
         }
         protected override object GetInstance(Type serviceType, string key)
         {
